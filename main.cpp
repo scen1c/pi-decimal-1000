@@ -3,7 +3,7 @@
 #include <boost/multiprecision/cpp_dec_float.hpp>
 #include <boost/math/constants/constants.hpp>
 
-// Универсальный тип десятичной точности на 1000 знаков:
+// Universal decimal precision type up to 1000 characters:
 using BigFloat =
     boost::multiprecision::number<boost::multiprecision::cpp_dec_float<1000>>;
 
@@ -17,7 +17,7 @@ int main() {
         return 1;
     }
 
-    // π из Boost (точность задаётся типом BigFloat)
+    // π from Boost (precision is set by the BigFloat type)
     BigFloat pi = boost::math::constants::pi<BigFloat>();
 
     std::cout << std::fixed << std::setprecision(digits) << pi << '\n';
